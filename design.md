@@ -345,13 +345,7 @@ Provide:
 });
 ```
 
-**Environment Variables:**
-```env
-GOOGLE_AI_API_KEY=AIzaSyD2L_EYXqdpXux3lC0kqVUOB0PlW21QUlM
-AI_MODEL=gemini-pro
-AI_MAX_TOKENS=2000
-AI_TEMPERATURE=0.7
-```
+
 
 #### 2.3 Code Explainer Service
 
@@ -1186,3 +1180,4 @@ app.get('/health', (req, res) => {
 **Last Updated:** February 2026  
 **Status:** ✅ Production Ready  
 **Developers:** Akash Kumar & Shudanshu Kumar
+
