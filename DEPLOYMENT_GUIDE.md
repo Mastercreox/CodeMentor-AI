@@ -168,7 +168,7 @@ REACT_APP_API_BASE_URL=https://your-backend-url.railway.app/api/v1
 ```
 PORT=3001
 NODE_ENV=production
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/codementor
+
 REDIS_URL=redis://default:password@redis-host:6379
 JWT_SECRET=your-super-secret-jwt-key-here
 JWT_EXPIRES_IN=7d
