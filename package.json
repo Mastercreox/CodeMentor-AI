@@ -1,0 +1,43 @@
+{
+  "name": "codementor-ai",
+  "version": "1.0.0",
+  "description": "Educational platform for beginner programmers",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "services/*"
+  ],
+  "scripts": {
+    "setup": "node setup.js",
+    "fix": "node fix-dependencies.js",
+    "status": "node check-status.js",
+    "detect-ports": "node detect-ports.js",
+    "build": "npm run build --workspaces",
+    "build:services": "cd services/llm-service && npm run build && cd ../code-explainer-service && npm run build && cd ../error-analyzer-service && npm run build && cd ../api-gateway && npm run build",
+    "install:services": "cd services/llm-service && npm install && cd ../code-explainer-service && npm install && cd ../error-analyzer-service && npm install && cd ../api-gateway && npm install",
+    "start:services": "node start-production.js",
+    "test": "npm run test --workspaces",
+    "test:unit": "npm run test:unit --workspaces",
+    "test:property": "npm run test:property --workspaces",
+    "dev": "node scripts/dev.js",
+    "dev:gateway": "npm run dev --workspace=api-gateway",
+    "dev:client": "npm run dev --workspace=web-client",
+    "health": "node scripts/health-check.js",
+    "deploy:prepare": "git add . && git commit -m \"Prepare for deployment\"",
+    "lint": "eslint . --ext .ts,.tsx",
+    "type-check": "tsc --noEmit",
+    "clean": "npm run clean --workspaces"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "concurrently": "^8.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^4.9.5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
