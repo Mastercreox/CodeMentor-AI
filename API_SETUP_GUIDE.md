@@ -178,7 +178,7 @@ PORT=3002
 NODE_ENV=development
 
 # Database
-MONGODB_URI=mongodb+srv://codementor:your-password@cluster0.xxxxx.mongodb.net/codementor?retryWrites=true&w=majority
+
 
 # Redis
 REDIS_URL=redis://default:your-password@redis-xxxxx.cloud.redislabs.com:12345
